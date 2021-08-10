@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center; /*sağdan soldan ortala */
+  align-items: center; /*üstten alttan ortala */
+  background: linear-gradient(to right, #75aaea, #b2db60);
+}
+.clock {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+  border: 5px solid #470000;
+  border-radius: 50%;
+  background: url("https://cssanimation.rocks/images/posts/clocks/ios_clock.svg")
+    center;
+  background-repeat: no-repeat;
+  background-size: 88%;
+}
+.secs {
+  position: absolute; /* posizyonunu kendim yapcam*/
+  top: 50%;
+  left: 50%;
+  height: 12rem;
+  width: 0.1rem;
+  background-color: tomato;
+  transform: translateX(-50%); /*saniyenin köşesini ortaladık */
+  transform-origin: 25% 0; /*saniyenin bir köşesini ortaya sabitledik */
+}
+.mins {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 9rem;
+  width: 0.3rem;
+  border-radius: 20px;
+  background-color: black;
+  transform: translateX(-50%);
+  transform-origin: 25% 0;
+}
+.hours {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 6rem;
+  border-radius: 3px;
+  width: 0.5rem;
+  background-color: black;
+  transform: translateX(-50%);
+  transform-origin: 25% 0;
+}
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1rem;
+  border-radius: 50%;
+  width: 1rem;
+  background-color: black;
+  transform: translateX(-50%);
+}
